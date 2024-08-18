@@ -1,1 +1,73 @@
-dsdfs
+11. When you combine these two concepts, "sandboxing 3rd party library calls" means that you are running the code that uses these external libraries in a controlled, isolated environment to prevent potential security risks or unintended behavior. This isolation ensures that even if the third-party library has vulnerabilities or performs unexpected operations, it cannot harm the overall system or access sensitive data.
+
+12. When writing a C++ library, the principle of "no concurrency code in library" means that the library should not directly manage threads or other concurrency mechanisms within its core business logic. This design choice is often recommended to ensure that the library remains flexible, portable, and easier to integrate into various applications that may have different concurrency requirements.
+Key Reasons for Avoiding Direct Thread Spawning in Core Business Logic:
+Flexibility for Users: By avoiding direct thread management, you allow the library's users to decide how to handle concurrency based on their application's specific needs. This could involve using their own threading models, thread pools, or integrating with existing frameworks like std::async, Boost.Asio, or other concurrency libraries.
+Simpler API Design: Libraries without embedded concurrency logic tend to have simpler APIs. Users can focus on using the library's core functionalities without worrying about how threading is managed under the hood.
+By adhering to this principle, you create a library that is more versatile, easier to maintain, and safer to use in a wide range of applications.
+
+example: 
+Suppose you're developing a C++ library for matrix operations. Instead of directly managing threads within the library (e.g., spawning threads to parallelize matrix multiplication), you avoid any concurrency logic in your library's core business logic. In this example, the multiply function performs matrix multiplication without spawning any threads. The library user can choose to parallelize this operation if needed.
+
+class Matrix {
+public:
+    Matrix multiply(const Matrix& other) const;
+    // Other matrix operations...
+};
+
+// matrix.cpp
+Matrix Matrix::multiply(const Matrix& other) const {
+    Matrix result;
+    // Perform the matrix multiplication in a single thread
+    // without any concurrency.
+    for (size_t i = 0; i < this->rows; ++i) {
+        for (size_t j = 0; j < other.columns; ++j) {
+            result[i][j] = 0;
+            for (size_t k = 0; k < this->columns; ++k) {
+                result[i][j] += this->data[i][k] * other.data[k][j];
+            }
+        }
+    }
+    return result;
+}
+
+--> Suppose now you want to parallelize the matrix multiplication by using multiple threads within the library.
+In this example, the multiply function spawns a separate thread to handle the multiplication for each row of the matrix. This parallelizes the operation, potentially making it faster on multi-core systems.
+
+#include <thread>
+#include <vector>
+
+// matrix.h
+class Matrix {
+public:
+    Matrix multiply(const Matrix& other) const;
+    // Other matrix operations...
+};
+
+// matrix.cpp
+Matrix Matrix::multiply(const Matrix& other) const {
+    Matrix result;
+    std::vector<std::thread> threads;
+
+    // Function to perform multiplication for a specific row
+    auto multiplyRow = [&](size_t i) {
+        for (size_t j = 0; j < other.columns; ++j) {
+            result[i][j] = 0;
+            for (size_t k = 0; k < this->columns; ++k) {
+                result[i][j] += this->data[i][k] * other.data[k][j];
+            }
+        }
+    };
+
+    // Spawn a thread for each row of the matrix
+    for (size_t i = 0; i < this->rows; ++i) {
+        threads.emplace_back(multiplyRow, i);
+    }
+
+    // Wait for all threads to finish
+    for (auto& thread : threads) {
+        thread.join();
+    }
+
+    return result;
+}
