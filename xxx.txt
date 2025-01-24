@@ -1,16 +1,48 @@
-1. This year, I began my rotation in the Rates team, starting with a focus on the cash side during the first half and transitioning to support both the cash and repo desks in the second half.
+My project is about helping traders use a platform called VASARA, which is a vital tool for their daily work. VASARA allows traders to accurately figure out how much their trades are worth and understand the risks involved in their portfolios. It combines models, data, and tools to help traders make better decisions and manage risks effectively.
 
-For the cash side, I collaborated closely with senior quants to develop and maintain models within the FIX library, assisted model validators to ensure compliance and accuracy, and worked alongside core quants to deepen my understanding of the library’s structure. My key projects included implementing the deflation floor on the TIPS pricer, fixing a bug in the inflation curve bump function, and building the deflation floor feature for the TIPS Asset Swap model. Additionally, I enhanced the model in SirFix/FixSir to support the deflation floor in RiskService. I also collaborated with Bing Chen to better understand the construction of the yield curve (SOFR) and inflation curve, and maintained a submission sheet for inflation products in Totem.
+As a Line of Business Quant, I focus on integrating repo (repurchase agreement) models into VASARA. My main responsibilities include:
 
-On the repo desk, I focused primarily on data sourcing and Vasara development. I contributed to the construction of GS, SC, OBFR, and EQ curves and worked closely with the Rushmore team to create and publish spreadsheets for these curves. I also collaborated with Julia Jiang and the Vasara developer to implement the accrual interest PnL calculator and participated in portfolio testing and reconciliation. In addition, I prepared a detailed spreadsheet that was presented to the repo desk for analysis and review.
+Making Repo Data Available:
+
+I work with teams to prepare and provide repo-related data, like interest rate curves (e.g., SC, GC, EQ, OBFR curves), to the system.
+I ensure that this data is built correctly, tested, and accurately mapped into VASARA.
+Testing Tools for Accuracy:
+
+I test the existing tools in VASARA that calculate repo prices and risks to ensure they work for different types of repos.
+Preparing for Internal Reviews:
+
+I create documents and prepare testing results for the repo models so that they can be reviewed by Wells Fargo’s Model Validation team.
+I make sure our models meet the bank’s rules and comply with industry standards and regulations.
+Helping Traders Work More Efficiently:
+
+I’ve developed tools like a curve-saving tool, which helps traders save daily updates to their interest rate curves.
+I assist with other trader requests, like preparing spreadsheets or answering questions about the system.
+Why This Is Important
+For Traders:
+
+VASARA gives traders the tools they need to make smart decisions and manage their trades better.
+By ensuring the repo data and tools are accurate, I help traders reduce mistakes and focus on trading strategies.
+For Wells Fargo:
+
+This project helps the bank ensure its trading tools and risk models are reliable and meet regulatory requirements.
+By moving everything into VASARA, the bank can manage data and models in one place, making operations more efficient and scalable.
+For Society and the Financial System:
+
+Repo markets are a key part of the financial system, helping keep the flow of cash and securities running smoothly.
+My work ensures that these markets are supported by reliable tools and data, contributing to the stability of the broader financial system.
+Would you like to simplify any part further or add more details? 😊
 
 
-2. For the cash side, I focused on developing and maintaining models for inflation-related products. Through this work, I gained a solid understanding of both the products and the FIX library. Moving forward, I want to emphasize refining the design and structure of these models to ensure they are well-organized and intuitive. Additionally, I realized the value of paying close attention to details through my replication work, and I aim to further enhance this skill in upcoming projects.
-
-For the repo side, I concentrated on understanding the construction of repo curves and performing metric calculations. In the near term, I would like to improve my ability to communicate technical concepts more effectively. From my experience preparing spreadsheets to present to traders and other team members, I recognized a gap in how I convey complex ideas. I want to focus on illustrating the problem, explaining how it is resolved, and clearly presenting the reasoning behind my solutions when sharing my work.
 
 
-3. For the projects I have completed, I ensured compliance with all rules and guidelines during the development of the library, preparation of testing, and documentation updates. For instance, in the TIPS Asset Swap modeling project, we conducted thorough front-office testing to evaluate the model’s performance across various scenarios. While updating documentation, such as the Model Development Document (MDD), we incorporated Key Model Risks to provide a comprehensive framework for understanding, monitoring, and managing potential risks associated with the model.
 
 
-4. Overall, I believe I performed well this year and made significant progress in my role as a front-office quant. I gained valuable experience in development work, learning how to identify issues, understand them thoroughly, replicate them, and implement effective solutions. Additionally, I had the opportunity to collaborate closely with the repo desk, traders, and teams such as Rushmore and Vasara, which broadened my understanding of various product aspects. This has been an excellent learning opportunity for me, encouraging independent thinking and giving me the chance to observe and learn how others approach their work and communicate their ideas effectively.
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info.
