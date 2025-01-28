@@ -1,48 +1,14 @@
-My project is about helping traders use a platform called VASARA, which is a vital tool for their daily work. VASARA allows traders to accurately figure out how much their trades are worth and understand the risks involved in their portfolios. It combines models, data, and tools to help traders make better decisions and manage risks effectively.
+Industry Problem/Shortcoming:
 
-As a Line of Business Quant, I focus on integrating repo (repurchase agreement) models into VASARA. My main responsibilities include:
+In industries like finance, healthcare, and energy, models are used to make critical decisions. However:
+Lack of Interpretability: Many complex models act like "black boxes," making it difficult to understand how inputs impact outputs.
+Computational Challenges: Calculating global sensitivity indices and Shapley values for high-dimensional models is computationally expensive, limiting their practical use in real-world scenarios.
+Suboptimal Decision-Making: Without understanding key drivers, decision-makers often focus on less important variables, leading to inefficiencies.
+How Your Project Solves It:
 
-Making Repo Data Available:
-
-I work with teams to prepare and provide repo-related data, like interest rate curves (e.g., SC, GC, EQ, OBFR curves), to the system.
-I ensure that this data is built correctly, tested, and accurately mapped into VASARA.
-Testing Tools for Accuracy:
-
-I test the existing tools in VASARA that calculate repo prices and risks to ensure they work for different types of repos.
-Preparing for Internal Reviews:
-
-I create documents and prepare testing results for the repo models so that they can be reviewed by Wells Fargo’s Model Validation team.
-I make sure our models meet the bank’s rules and comply with industry standards and regulations.
-Helping Traders Work More Efficiently:
-
-I’ve developed tools like a curve-saving tool, which helps traders save daily updates to their interest rate curves.
-I assist with other trader requests, like preparing spreadsheets or answering questions about the system.
-Why This Is Important
-For Traders:
-
-VASARA gives traders the tools they need to make smart decisions and manage their trades better.
-By ensuring the repo data and tools are accurate, I help traders reduce mistakes and focus on trading strategies.
-For Wells Fargo:
-
-This project helps the bank ensure its trading tools and risk models are reliable and meet regulatory requirements.
-By moving everything into VASARA, the bank can manage data and models in one place, making operations more efficient and scalable.
-For Society and the Financial System:
-
-Repo markets are a key part of the financial system, helping keep the flow of cash and securities running smoothly.
-My work ensures that these markets are supported by reliable tools and data, contributing to the stability of the broader financial system.
-Would you like to simplify any part further or add more details? 😊
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ChatGPT can make mistakes. Check important info.
+You developed efficient computational methods to estimate global sensitivity indices and Shapley values, making these analyses feasible for large, high-dimensional models.
+By improving interpretability, your work helps stakeholders identify the most critical inputs driving a model's output, leading to better-informed decisions.
+In finance: Helps identify the factors most impacting risk or returns in portfolios.
+In healthcare: Guides attention to the most critical biomarkers or treatment variables.
+In energy: Highlights the most influential factors affecting power grid stability or renewable energy optimization.
+Your methods reduce resource consumption (time, computational power), making sensitivity analysis accessible to organizations with limited infrastructure.
