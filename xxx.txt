@@ -1,14 +1,10 @@
-Industry Problem/Shortcoming:
-
-In industries like finance, healthcare, and energy, models are used to make critical decisions. However:
-Lack of Interpretability: Many complex models act like "black boxes," making it difficult to understand how inputs impact outputs.
-Computational Challenges: Calculating global sensitivity indices and Shapley values for high-dimensional models is computationally expensive, limiting their practical use in real-world scenarios.
-Suboptimal Decision-Making: Without understanding key drivers, decision-makers often focus on less important variables, leading to inefficiencies.
-How Your Project Solves It:
-
-You developed efficient computational methods to estimate global sensitivity indices and Shapley values, making these analyses feasible for large, high-dimensional models.
-By improving interpretability, your work helps stakeholders identify the most critical inputs driving a model's output, leading to better-informed decisions.
-In finance: Helps identify the factors most impacting risk or returns in portfolios.
-In healthcare: Guides attention to the most critical biomarkers or treatment variables.
-In energy: Highlights the most influential factors affecting power grid stability or renewable energy optimization.
-Your methods reduce resource consumption (time, computational power), making sensitivity analysis accessible to organizations with limited infrastructure.
+template <typename T, typename... Args>
+auto createObject(Args&&... args) {
+    if constexpr (std::is_pointer_v<T>) {
+        // Case: T is a raw pointer (e.g., R0Key*)
+        return new std::remove_pointer_t<T>(std::forward<Args>(args)...);
+    } else {
+        // Case: T is a smart pointer (e.g., std::unique_ptr<R0Key>, std::shared_ptr<R0Key>)
+        return T(new typename T::element_type(std::forward<Args>(args)...));
+    }
+}
