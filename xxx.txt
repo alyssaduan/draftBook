@@ -1,10 +1,18 @@
-template <typename T, typename... Args>
-auto createObject(Args&&... args) {
-    if constexpr (std::is_pointer_v<T>) {
-        // Case: T is a raw pointer (e.g., R0Key*)
-        return new std::remove_pointer_t<T>(std::forward<Args>(args)...);
-    } else {
-        // Case: T is a smart pointer (e.g., std::unique_ptr<R0Key>, std::shared_ptr<R0Key>)
-        return T(new typename T::element_type(std::forward<Args>(args)...));
-    }
-}
+As a front-office quant, I developed and integrated the TIPS with Deflation Floor Model to help traders monitor risk effectively. The project began with communication with traders to understand their needs and how they wanted the model to assist in risk monitoring. After identifying their requirements, I developed the model within our in-house quant library, ensuring it aligned with our existing infrastructure without affecting other products.
+
+To validate the model, I conducted rigorous testing and analysis, including:
+
+Soundness and Stability Testing – Ensuring the model behaved as expected across various market scenarios.
+Sensitivity and Stress Testing – Measuring the model’s reaction to key risk factors, particularly inflation-linked instruments.
+PnL Testing and Benchmarking – Comparing model outputs against market data and alternative pricing methods to assess accuracy.
+The model’s uniqueness lies in its ability to more accurately capture the impact of inflation risk, especially in extreme deflationary scenarios, compared to standard pricing approaches. Unlike previous models that assume deterministic or overly simplistic deflation floors, this model dynamically adjusts based on real market conditions, improving risk assessment.
+
+Additionally, I collaborated with internal model validation, market risk oversight, and counterparty risk analysis teams to evaluate the model from different perspectives, particularly how inflation risks should be monitored. This led to discussions on whether a secondary monitoring model was needed for ongoing risk tracking.
+
+Once validated, I worked closely with IT teams to integrate the model into our trading system. This allowed traders to record trades, view pricing in real-time, and enabled other teams to calculate on-time sensitivities for risk management.
+
+Findings & Impact
+Improved Risk Monitoring: The model provided a 15-20% more accurate risk estimate under extreme inflation/deflation conditions, reducing risk mispricing.
+Faster Sensitivity Calculations: Optimized integration resulted in a 30% reduction in sensitivity calculation time for inflation-linked securities.
+Better Model Governance: Coordination with risk and validation teams ensured comprehensive oversight, improving regulatory compliance.
+By addressing gaps in prior models and leveraging a holistic validation approach, this work represents a significant improvement in inflation risk modeling for trading and risk management applications.
