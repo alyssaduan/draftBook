@@ -1,18 +1,18 @@
-As a front-office quant, I developed and integrated the TIPS with Deflation Floor Model to help traders monitor risk effectively. The project began with communication with traders to understand their needs and how they wanted the model to assist in risk monitoring. After identifying their requirements, I developed the model within our in-house quant library, ensuring it aligned with our existing infrastructure without affecting other products.
+As a front-office quant, I led the development and integration of the repo curve model for the Vasara platform to support the repo desk. The project began with close collaboration with our line-of-business quants to construct a robust curve-building methodology tailored for repo markets. After developing the model, I conducted testing to validate its accuracy and stability.
 
-To validate the model, I conducted rigorous testing and analysis, including:
+To operationalize the model, I worked with the data sourcing team to ensure that the repo curves were properly sourced into Vasara. I then collaborated with Vasara quants, who function as engineers, to map these curves into Vasara, ensuring that the correct pricing models for repo transactions accessed the appropriate curves.
 
-Soundness and Stability Testing – Ensuring the model behaved as expected across various market scenarios.
-Sensitivity and Stress Testing – Measuring the model’s reaction to key risk factors, particularly inflation-linked instruments.
-PnL Testing and Benchmarking – Comparing model outputs against market data and alternative pricing methods to assess accuracy.
-The model’s uniqueness lies in its ability to more accurately capture the impact of inflation risk, especially in extreme deflationary scenarios, compared to standard pricing approaches. Unlike previous models that assume deterministic or overly simplistic deflation floors, this model dynamically adjusts based on real market conditions, improving risk assessment.
+Throughout this process, I was responsible for validating each step, ensuring that the repo curve remained consistent across teams and aligned with expectations. This cross-team validation was crucial in maintaining the accuracy and usability of the curve across trading, risk, and analytics functions.
 
-Additionally, I collaborated with internal model validation, market risk oversight, and counterparty risk analysis teams to evaluate the model from different perspectives, particularly how inflation risks should be monitored. This led to discussions on whether a secondary monitoring model was needed for ongoing risk tracking.
+Following successful integration, I prepared front-office testing and documentation to support model validation, similar to my previous work. This included:
 
-Once validated, I worked closely with IT teams to integrate the model into our trading system. This allowed traders to record trades, view pricing in real-time, and enabled other teams to calculate on-time sensitivities for risk management.
+Curve Construction Soundness Testing – Verifying that the repo curve behaved correctly across different market conditions.
+Cross-Team Consistency Checks – Ensuring that the curve matched expectations when used in different models across Vasara.
+Sensitivity and Stress Testing – Measuring how the model performed under stressed funding market conditions.
+To finalize adoption, I worked closely with model validators to gain internal approval for traders and other teams to officially use the model.
 
 Findings & Impact
-Improved Risk Monitoring: The model provided a 15-20% more accurate risk estimate under extreme inflation/deflation conditions, reducing risk mispricing.
-Faster Sensitivity Calculations: Optimized integration resulted in a 30% reduction in sensitivity calculation time for inflation-linked securities.
-Better Model Governance: Coordination with risk and validation teams ensured comprehensive oversight, improving regulatory compliance.
-By addressing gaps in prior models and leveraging a holistic validation approach, this work represents a significant improvement in inflation risk modeling for trading and risk management applications.
+Enhanced Pricing Accuracy: The new repo curve model improved pricing precision for repo transactions, reducing errors due to curve mismatches.
+Seamless Integration Across Vasara: Ensured that the correct repo pricer could reliably read the mapped curves, improving usability for trading desks.
+Improved Model Governance: Rigorous cross-validation across teams led to a more transparent and auditable curve-building process.
+This work significantly improved repo market risk assessment and trade pricing, ensuring that traders had access to consistent and accurate repo curves within Vasara.
