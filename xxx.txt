@@ -1,18 +1,37 @@
-As a front-office quant, I led the development and integration of the repo curve model for the Vasara platform to support the repo desk. The project began with close collaboration with our line-of-business quants to construct a robust curve-building methodology tailored for repo markets. After developing the model, I conducted testing to validate its accuracy and stability.
+mpact Across Academia, Science, Industry, Business, Society, and the U.S. Economy
 
-To operationalize the model, I worked with the data sourcing team to ensure that the repo curves were properly sourced into Vasara. I then collaborated with Vasara quants, who function as engineers, to map these curves into Vasara, ensuring that the correct pricing models for repo transactions accessed the appropriate curves.
+🔹 Academia & Science
+Advances the theoretical modeling of inflation-protected securities by addressing the complexities of deflation floors in pricing models.
+Provides a new quantitative framework that researchers can build upon in future studies of inflation-linked products.
+Enhances risk management methodologies, contributing to financial mathematics and economic modeling literature.
+🔹 Financial Industry & Business
+Improves risk management for traders and institutional investors by providing more precise pricing and risk assessments of TIPS in deflationary environments.
+Reduces mispricing risk for financial firms, ensuring more accurate hedging strategies in inflation-linked markets.
+Helps pension funds, insurance companies, and asset managers make better investment decisions in U.S. inflation-linked securities.
+🔹 U.S. Economy & Government
+Enhances the stability of U.S. Treasury markets, making TIPS a more reliable tool for investors protecting against inflation.
+Helps the Federal Reserve and Treasury Department better understand inflation dynamics when issuing and managing TIPS.
+Provides more accurate inflation expectations, assisting policymakers and economic forecasters in decision-making.
+🔹 Society & Public Good
+Ensures that retirees, pensioners, and savers who rely on TIPS for inflation protection receive fair market valuations, improving financial security.
+Reduces systemic risk in the financial system by enhancing transparency in inflation-linked bond pricing.
+Supports broader economic stability by improving market confidence in inflation-hedging instruments.
+2️⃣ Contribution: Repo Curve Model for Vasara Platform
+Impact Across Academia, Science, Industry, Business, Society, and the U.S. Economy
 
-Throughout this process, I was responsible for validating each step, ensuring that the repo curve remained consistent across teams and aligned with expectations. This cross-team validation was crucial in maintaining the accuracy and usability of the curve across trading, risk, and analytics functions.
-
-Following successful integration, I prepared front-office testing and documentation to support model validation, similar to my previous work. This included:
-
-Curve Construction Soundness Testing – Verifying that the repo curve behaved correctly across different market conditions.
-Cross-Team Consistency Checks – Ensuring that the curve matched expectations when used in different models across Vasara.
-Sensitivity and Stress Testing – Measuring how the model performed under stressed funding market conditions.
-To finalize adoption, I worked closely with model validators to gain internal approval for traders and other teams to officially use the model.
-
-Findings & Impact
-Enhanced Pricing Accuracy: The new repo curve model improved pricing precision for repo transactions, reducing errors due to curve mismatches.
-Seamless Integration Across Vasara: Ensured that the correct repo pricer could reliably read the mapped curves, improving usability for trading desks.
-Improved Model Governance: Rigorous cross-validation across teams led to a more transparent and auditable curve-building process.
-This work significantly improved repo market risk assessment and trade pricing, ensuring that traders had access to consistent and accurate repo curves within Vasara.
+🔹 Academia & Science
+Advances quantitative finance research on repo markets, a critical but less studied area compared to traditional bond pricing models.
+Introduces a structured approach to repo curve modeling, contributing to academic studies on short-term funding markets.
+Helps economists and policymakers better understand the transmission of monetary policy through repo markets.
+🔹 Financial Industry & Business
+Ensures that traders and risk managers have an accurate repo curve, improving pricing efficiency for repo transactions.
+Helps banks and financial institutions optimize short-term funding decisions, reducing borrowing costs and improving capital allocation.
+Enhances liquidity management in repo markets, ensuring that institutions can better manage cash and collateral.
+🔹 U.S. Economy & Government
+Strengthens repo market stability, a key funding mechanism for banks and financial firms that supports U.S. financial stability.
+Supports the Federal Reserve's monetary policy operations, as repo rates are used to manage short-term interest rates.
+Helps regulators monitor systemic risks in short-term funding markets, reducing the likelihood of a liquidity crisis.
+🔹 Society & Public Good
+Ensures safer and more resilient financial markets, reducing the risk of repo market disruptions like those seen during past financial crises.
+Helps the U.S. housing and corporate lending markets by making short-term funding more efficient, indirectly benefiting consumers and businesses.
+Reduces systemic risk in pension funds, mutual funds, and banks, ensuring more stability for everyday investors.
